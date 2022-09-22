@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.example.sns_project.data.Community" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_poster_user"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_person_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_poster_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:text="@{item.title}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/blue"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/item_poster_running_time"
+            app:layout_constraintStart_toEndOf="@id/item_poster_user"
+            app:layout_constraintTop_toTopOf="@+id/item_poster_user"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="제목" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_poster_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="70dp"
+            android:drawableStart="@drawable/ic_baseline_favorite_24"
+            android:drawablePadding="5dp"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@{item.likeCount}"
+            app:layout_constraintBottom_toTopOf="@+id/item_poster_running_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_poster_user"
+            app:layout_constraintRight_toLeftOf="@id/item_poster_comment"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_poster_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_comment_24"
+            android:paddingLeft="20dp"
+            android:drawablePadding="5dp"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@{item.commentCount}"
+            app:layout_constraintTop_toTopOf="@+id/item_poster_like"
+            app:layout_constraintLeft_toRightOf="@+id/item_poster_like"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_poster_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="4dp"
+            android:text="@{item.userName}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/item_poster_content"
+            app:layout_constraintStart_toStartOf="@id/item_poster_user"
+            app:layout_constraintTop_toBottomOf="@+id/item_poster_user"
+            tools:text="닉네임" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_poster_running_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="250dp"
+            android:text="@{item.timeFormat}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/item_poster_content"
+            app:layout_constraintTop_toBottomOf="@+id/item_poster_comment"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="시간" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_poster_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:maxLines="3"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingHorizontal="10dp"
+            android:text="@{item.content}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/sourceImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_poster_userName"
+            app:layout_constraintBottom_toTopOf="@id/sourceImage"
+            tools:text="내용" />
+
+        <ImageView
+            android:id="@+id/sourceImage"
+            android:layout_width="0dp"
+            android:layout_height="270dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_poster_content"
+            tools:ignore="ContentDescription"
+            app:imageCenterCrop="@{item.imgPath}"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_delete"
+            android:layout_width="420dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="20dp"
+            android:background="@color/blue"
+            android:text="삭제하기"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/sourceImage"
+            app:layout_constraintTop_toBottomOf="@+id/sourceImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

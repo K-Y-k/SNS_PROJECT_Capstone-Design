@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="address_array">
+        <item>(시군구 / 읍면동) ex) 둔산동</item>
+        <item>서울특별시</item>
+        <item>인천광역시</item>
+        <item>대전광역시</item>
+        <item>대구광역시</item>
+        <item>울산광역시</item>
+        <item>부산광역시</item>
+        <item>세종시</item>
+    </string-array>
+
+</resources>
