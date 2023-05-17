@@ -1,16 +1,16 @@
 # :rocket: SNS_PROJECT_Capstone-Design : Farm Garden
-캡스톤디자인 - 팀 프로젝트: 주말 농장인을 위한 농작물 관리 서비스 어플
+캡스톤디자인 - 팀 프로젝트 : 주말 농장인을 위한 농작물 관리 서비스 어플
 
 - 개발 인원: 4명
 - 참여자별 활동
 
    ⦁ 팀장: 최병진 - 기획, 서버, 아두이노 개발
    
-   ⦁ 팀원: 김용경 - 기획, 서버, 안드로이드 개발(회원 관리 시스템, 날씨, 메인 페이지, CCTV)
+   ⦁ 팀원: 김용경 - 기획, 서버, 안드로이드 어플 개발(회원 관리/프로필, 날씨, CCTV, 메인 페이지)
    
-   ⦁ 팀원: 최병욱 - 기획, 서버, 안드로이드 개발(커뮤니티)
+   ⦁ 팀원: 최병욱 - 기획, 서버, 안드로이드 어플 개발(커뮤니티)
    
-   ⦁ 팀원: 여은경 - 기획, 서버, 안드로이드 개발(작물사전)
+   ⦁ 팀원: 여은경 - 기획, 서버, 안드로이드 어플 개발(작물사전)
 
 - 개발 기간: 2022.03 ~ 2022.05
 
@@ -19,7 +19,10 @@
 - [어떤 프로젝트인가요?\(프로젝트의 목적\)](#어떤-프로젝트인가요?(프로젝트의-목적))
 - [개발 환경](#개발-환경)
 - [사용 기술](#사용-기술)
-- [진행 일정](#진행-일정)
+   * [언어](#언어)
+   * [Server & Database](#Server-&-Database)
+   * [기타 주요 라이브러리](#기타-주요-라이브러리)
+- [일정](#일정)
 - [기능적 요구사항](#기능적-요구사항)
 - [메뉴 구조 설계](#메뉴-구조-설계)
 - [유즈케이스 다이어그램](#유즈케이스-다이어그램)
@@ -62,14 +65,36 @@
   * #### OpenWeather API
 
 
+## :calendar: 일정
+![2](https://github.com/K-Y-k/SNS_PROJECT_Capstone-Design/assets/102020649/2d24f58a-8855-4518-adb1-62f66960a953)
+
+
+## :memo: 기능적 요구사항
+- ### 아두이노 기능 목표
+![2](https://github.com/K-Y-k/SNS_PROJECT_Capstone-Design/assets/102020649/ac366067-c809-48df-b107-2e83f537b718)
+
+- ### 어플리케이션 기능 목표
+![2](https://github.com/K-Y-k/SNS_PROJECT_Capstone-Design/assets/102020649/beaac99e-b98c-461b-aeba-a700120d9aff)
+
+
+## :mag: 메뉴 구조 설계
+- ### 아두이노
+![2](https://github.com/K-Y-k/SNS_PROJECT_Capstone-Design/assets/102020649/7ad4fdb9-5ec1-4549-8c89-37ccb463ff4e)
+
+- ### 어플리케이션
+![2](https://github.com/K-Y-k/SNS_PROJECT_Capstone-Design/assets/102020649/2efa28d4-4b5d-416e-817b-c61a4e3bbae3)
+
+
 ## :key: 유즈케이스 다이어그램
+![2](https://github.com/K-Y-k/SNS_PROJECT_Capstone-Design/assets/102020649/9c06262b-5a39-4455-bfd3-c6650013abdf)
 
 
-## :mag: 아키텍처 구성
+## :smiley: 사용자 시나리오
+![2](https://github.com/K-Y-k/SNS_PROJECT_Capstone-Design/assets/102020649/73ea98f5-6c75-481a-b6f0-a454e8445d71)
 
 
 ## :arrow_forward: 구현 영상
-<!-- [![Video Label](http://img.youtube.com/vi/uZDP6DqmpI8/0.jpg)](https://youtu.be/uZDP6DqmpI8) -->
+[![Video Label](http://img.youtube.com/vi/CoBGjp3mI8U/0.jpg)](https://youtu.be/CoBGjp3mI8U)
 
 
 ## :heavy_check_mark: 주요 기능
@@ -83,8 +108,10 @@
 
 
 ## :bulb: 프로젝트를 통해 느낀점
-- .
+- 프로젝트 기획-개발-배포(APK) 과정을 자세히 알 수 있었음
+- NoSql인 Firebase와 안드로이드를 연동하여 데이터들이 백엔드와 클라이언트 사이에서 어떻게 주고받는지 이해하게 됨
+- 외부 사이트의 API를 가져와서 내가 원하는 데이터를 JSON으로 가공해서 적용하는지 알 수 있었음 
 
 
 ## :ledger: 프로젝트 관련 추가 포스팅
-- [프로젝트 명세서](https://blog.naver.com/kyk7777_/222975254105
+- [프로젝트 명세서](https://blog.naver.com/kyk7777_)
