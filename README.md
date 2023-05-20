@@ -53,6 +53,7 @@
 - ### <b id="2.3"> 기타 주요 라이브러리 </b>
   * #### Firebase Android SDK
   * #### Firebase Authentication
+  * #### Cloud Firestore
   * #### Firebase Realtime Database
   * #### Firebase Storage
 
