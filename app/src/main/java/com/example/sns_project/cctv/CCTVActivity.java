@@ -1,4 +1,4 @@
-package com.example.sns_project;
+package com.example.sns_project.cctv;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.sns_project.MainActivity;
+import com.example.sns_project.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;

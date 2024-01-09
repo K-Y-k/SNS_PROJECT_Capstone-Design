@@ -1,4 +1,4 @@
-package com.example.sns_project.event;
+package com.example.sns_project.community.event;
 
 public class CommentRefreshEvent {
     private String community;

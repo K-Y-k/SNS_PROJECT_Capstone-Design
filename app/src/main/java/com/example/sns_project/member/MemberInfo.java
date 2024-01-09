@@ -1,4 +1,4 @@
-package com.example.sns_project;
+package com.example.sns_project.member;
 
 public class MemberInfo {      // 회원정보를 초기화 해주는 클래스 생성
     private String userName;

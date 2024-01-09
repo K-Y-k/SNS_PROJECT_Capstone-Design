@@ -14,7 +14,7 @@
         android:usesCleartextTraffic="true" >
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".member.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,10 +23,10 @@
         </activity>
 
         <activity
-            android:name=".RegisterActivity"
+            android:name=".member.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".PasswordResetActivity"
+            android:name=".member.PasswordResetActivity"
             android:exported="true" />
 
         <activity
@@ -34,11 +34,11 @@
             android:exported="true" />
 
         <activity
-            android:name=".CCTVActivity"
+            android:name=".cctv.CCTVActivity"
             android:exported="true" />
 
         <activity
-            android:name=".ProfileActivity"
+            android:name=".member.ProfileActivity"
             android:exported="true" />
 
         <activity

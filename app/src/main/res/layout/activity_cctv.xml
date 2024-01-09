@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/cctv_background"
     android:orientation="vertical"
-    tools:context=".CCTVActivity" >
+    tools:context=".cctv.CCTVActivity" >
 
     <TextView
         android:layout_width="wrap_content"

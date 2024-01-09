@@ -1,27 +1,17 @@
 package com.example.sns_project.community;
 
-import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.sns_project.FirebaseConst;
-import com.example.sns_project.L;
 import com.example.sns_project.R;
-import com.example.sns_project.adapter.CoummunityAdapter;
-import com.example.sns_project.adapter.MyCoummunityAdapter;
+import com.example.sns_project.community.adapter.MyCoummunityAdapter;
 import com.example.sns_project.data.Community;
-import com.example.sns_project.databinding.FragmentBoardBinding;
 import com.example.sns_project.databinding.FragmentMypageBinding;
-import com.example.sns_project.event.BoardRefreshEvent;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.sns_project;
+package com.example.sns_project.member;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +10,7 @@ import android.content.Intent;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.sns_project.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -33,14 +34,12 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onStart() {
-        super.onStart();
-    }
-
+    /**
+     * 각 버튼 클릭 시 이벤트 발생
+     */
     View.OnClickListener onClickListener = new View.OnClickListener(){
         @Override
-        public void onClick(View v) {   // 각 버튼 클릭 시 이벤트 발생
+        public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.btn_register:  // 회원가입 버튼을 클릭하면 회원가입 함수가 실행된다.
                     signUp();
@@ -54,7 +53,10 @@ public class RegisterActivity extends AppCompatActivity {
     };
 
 
-    private void signUp() {   // 회원가입 메서드
+    /**
+     * 회원가입 메서드
+     */
+    private void signUp() {
         String userEmail = ((EditText)findViewById(R.id.et_email)).getText().toString();   // 텍스트에 입력한 이메일, 비밀번호를 String 형식으로 가져온다.
         String userPass = ((EditText)findViewById(R.id.et_pass)).getText().toString();
 
@@ -77,4 +79,9 @@ public class RegisterActivity extends AppCompatActivity {
                 });
     }
 
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
 }

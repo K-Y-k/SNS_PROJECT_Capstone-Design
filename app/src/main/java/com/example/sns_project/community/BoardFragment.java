@@ -3,13 +3,11 @@ package com.example.sns_project.community;
 import android.content.Intent;
 import android.view.View;
 
-import com.example.sns_project.FirebaseConst;
-import com.example.sns_project.L;
 import com.example.sns_project.R;
-import com.example.sns_project.adapter.CoummunityAdapter;
+import com.example.sns_project.community.adapter.CoummunityAdapter;
 import com.example.sns_project.data.Community;
 import com.example.sns_project.databinding.FragmentBoardBinding;
-import com.example.sns_project.event.BoardRefreshEvent;
+import com.example.sns_project.community.event.BoardRefreshEvent;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;

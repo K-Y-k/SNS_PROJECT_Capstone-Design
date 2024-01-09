@@ -1,4 +1,4 @@
-package com.example.sns_project;
+package com.example.sns_project.community;
 
 import android.text.TextUtils;
 import android.util.Log;

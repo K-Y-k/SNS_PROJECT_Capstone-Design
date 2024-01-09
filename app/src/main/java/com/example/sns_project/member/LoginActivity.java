@@ -1,4 +1,4 @@
-package com.example.sns_project;
+package com.example.sns_project.member;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +10,8 @@ import android.content.Intent;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.sns_project.MainActivity;
+import com.example.sns_project.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -27,30 +29,19 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();  // 인증과 관련된 파이어베이스 선언
 
+        // 각 버튼 설정
         findViewById(R.id.btn_login).setOnClickListener(onClickListener);
         findViewById(R.id.btn_register).setOnClickListener(onClickListener);
         findViewById(R.id.btn_passwordReset).setOnClickListener(onClickListener);
     }
 
 
-    @Override
-    public void onBackPressed() {   // 다른 화면으로 이동되지 않고 바로 종료되는 메서드
-        super.onBackPressed();;
-        moveTaskToBack(true);
-        android.os.Process.killProcess(android.os.Process.myPid());
-        System.exit(1);
-    }
-
-
-    @Override
-    public void onStart() {
-        super.onStart();
-    }
-
-
+    /**
+     * 각 버튼 클릭시 발생하는 이벤트
+     */
     View.OnClickListener onClickListener = new View.OnClickListener(){
         @Override
-        public void onClick(View v) {           // 각 버튼 클릭 시 이벤트 발생
+        public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.btn_login:            // 로그인 버튼을 클릭했을 때 데이터베이스의 내용과 일치하면 메인 화면으로 이동하는 로그인 메서드 실행
                     signUp();
@@ -66,7 +57,10 @@ public class LoginActivity extends AppCompatActivity {
     };
 
 
-    private void signUp() {   // 로그인 메서드
+    /**
+     * 로그인 메서드
+     */
+    private void signUp() {
         String userEmail = ((EditText)findViewById(R.id.et_email)).getText().toString();   // 텍스트에 입력한 이메일, 비밀번호를 String 형식으로 가져온다.
         String userPass = ((EditText)findViewById(R.id.et_pass)).getText().toString();
 
@@ -93,6 +87,19 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    public void onBackPressed() {   // 다른 화면으로 이동되지 않고 바로 종료되는 메서드
+        super.onBackPressed();;
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
+    }
 
     private void IntentActivity(Class c){   // 인텐트 메서드
         Intent intent = new Intent(this, c);

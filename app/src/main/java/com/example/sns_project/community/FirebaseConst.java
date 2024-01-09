@@ -1,4 +1,4 @@
-package com.example.sns_project;
+package com.example.sns_project.community;
 
 public class FirebaseConst {
     public static final String STORAGE = "gs://sns-project-8af83.appspot.com";

@@ -7,13 +7,11 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.example.sns_project.FirebaseConst;
-import com.example.sns_project.L;
 import com.example.sns_project.R;
 import com.example.sns_project.data.Community;
 import com.example.sns_project.databinding.ActivityDetailBinding;
-import com.example.sns_project.event.BoardRefreshEvent;
-import com.example.sns_project.event.CommentRefreshEvent;
+import com.example.sns_project.community.event.BoardRefreshEvent;
+import com.example.sns_project.community.event.CommentRefreshEvent;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;

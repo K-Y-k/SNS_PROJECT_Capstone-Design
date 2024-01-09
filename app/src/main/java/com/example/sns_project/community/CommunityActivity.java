@@ -8,13 +8,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
-import com.example.sns_project.L;
 import com.example.sns_project.MainActivity;
 import com.example.sns_project.R;
 import com.example.sns_project.databinding.ActivityCommunityBinding;
 import com.ncapdevi.fragnav.FragNavController;
-
-import java.util.List;
 
 public class CommunityActivity extends AppCompatActivity implements FragNavController.RootFragmentListener {
     //커뮤니티 main Container 화면 이화면에 각각의 Fragment를 붙인다.

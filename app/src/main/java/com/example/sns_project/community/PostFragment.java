@@ -9,15 +9,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.bumptech.glide.Glide;
-import com.example.sns_project.FirebaseConst;
-import com.example.sns_project.L;
-import com.example.sns_project.MemberInfo;
 import com.example.sns_project.R;
 import com.example.sns_project.data.Community;
 import com.example.sns_project.databinding.FragmentPostBinding;
 import com.github.dhaval2404.imagepicker.ImagePicker;
-import com.github.dhaval2404.imagepicker.util.FileUriUtils;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,7 +24,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 public class PostFragment extends BaseFragment<FragmentPostBinding> {
 

@@ -14,15 +14,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DividerItemDecoration;
 
-import com.example.sns_project.FirebaseConst;
-import com.example.sns_project.L;
 import com.example.sns_project.R;
-import com.example.sns_project.adapter.ReplyAdapter;
+import com.example.sns_project.community.adapter.ReplyAdapter;
 import com.example.sns_project.data.Community;
 import com.example.sns_project.data.Message;
 import com.example.sns_project.databinding.ActivityReplyBinding;
-import com.example.sns_project.event.BoardRefreshEvent;
-import com.example.sns_project.event.CommentRefreshEvent;
+import com.example.sns_project.community.event.BoardRefreshEvent;
+import com.example.sns_project.community.event.CommentRefreshEvent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,7 +29,6 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import org.greenrobot.eventbus.EventBus;

@@ -1,4 +1,4 @@
-package com.example.sns_project;
+package com.example.sns_project.member;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.sns_project.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,17 +25,19 @@ public class PasswordResetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_password_reset);
 
-        // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();  // 인증과 관련된 파이어베이스 선언
 
         findViewById(R.id.btn_send).setOnClickListener(onClickListener);
         findViewById(R.id.btn_login).setOnClickListener(onClickListener);
     }
 
 
+    /**
+     * 각 버튼 클릭 시 이벤트 발생
+     */
     View.OnClickListener onClickListener = new View.OnClickListener(){
         @Override
-        public void onClick(View v) {   // 각 버튼 클릭 시 이벤트 발생
+        public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.btn_send:     // 비밀번호 재설정 이메일 발송 버튼을 클릭했을 때 비밀번호 재설정 함수를 실행한다.
                     send();
@@ -44,17 +47,19 @@ public class PasswordResetActivity extends AppCompatActivity {
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     break;
-
             }
         }
     };
 
 
-    private void send() {   // 비밀번호 재설정 메서드
+    /**
+     * 비밀번호 재설정 메서드
+     */
+    private void send() {
         String userEmail = ((EditText)findViewById(R.id.et_email)).getText().toString();   // 텍스트에 적은 이메일를 String 형식으로 가져온다.
 
-        if(userEmail.length() > 0) {
-            mAuth.sendPasswordResetEmail(userEmail)   // 이메일이 입력되었을 때
+        if (userEmail.length() > 0) {
+            mAuth.sendPasswordResetEmail(userEmail)     // 이메일이 입력되었을 때
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -65,9 +70,8 @@ public class PasswordResetActivity extends AppCompatActivity {
                             }
                         }
                     });
-        }else   {
+        } else {
             Toast.makeText(PasswordResetActivity.this, "이메일을 입력해주세요", Toast.LENGTH_SHORT).show();
         }
     }
-
 }

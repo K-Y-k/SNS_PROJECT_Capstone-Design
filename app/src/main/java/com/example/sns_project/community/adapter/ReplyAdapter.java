@@ -1,4 +1,4 @@
-package com.example.sns_project.adapter;
+package com.example.sns_project.community.adapter;
 
 import android.content.Context;
 import android.view.ViewGroup;
